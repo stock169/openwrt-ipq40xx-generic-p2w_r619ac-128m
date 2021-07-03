@@ -12,6 +12,7 @@
 
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+echo "" > feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
 sed -i '$a\diff -Naur a/metadata.c b/metadata.c'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
 sed -i '$a\--- a/metadata.c	2019-12-10 13:34:44.000000000 +0800'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
 sed -i '$a\+++ b/metadata.c	2020-07-08 14:58:45.508877011 +0800'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
