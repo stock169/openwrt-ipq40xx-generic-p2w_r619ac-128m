@@ -67,14 +67,14 @@ sed -i '$a\diff -Naur a/upnpglobalvars.h b/upnpglobalvars.h'  feeds/packages/mul
 sed -i '$a\--- a/upnpglobalvars.h	2019-12-10 13:34:44.000000000 +0800'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
 sed -i '$a\+++ b/upnpglobalvars.h	2020-07-08 14:40:26.560487535 +0800'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
 sed -i '$a\@@ -172,7 +172,11 @@'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
-sed -i '$a\ 	"http-get:*:audio/x-wav:*," \'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
-sed -i '$a\ 	"http-get:*:audio/x-flac:*," \'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
-sed -i '$a\ 	"http-get:*:audio/x-dsd:*," \'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
+sed -i '$a\ 	"http-get:*:audio/x-wav:*," \x5c'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
+sed -i '$a\ 	"http-get:*:audio/x-flac:*," \x5c'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
+sed -i '$a\ 	"http-get:*:audio/x-dsd:*," \x5c'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
 sed -i '$a\-	"http-get:*:application/ogg:*"'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
-sed -i '$a\+        "http-get:*:audio/x-ape:*," \'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
-sed -i '$a\+	"http-get:*:audio/x-dsd:*," \'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
-sed -i '$a\+        "http-get:*:audio/x-matroska:*," \'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
-sed -i '$a\+	"http-get:*:application/ogg:*" \'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
+sed -i '$a\+        "http-get:*:audio/x-ape:*," \x5c'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
+sed -i '$a\+	"http-get:*:audio/x-dsd:*," \x5c'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
+sed -i '$a\+        "http-get:*:audio/x-matroska:*," \x5c'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
+sed -i '$a\+	"http-get:*:application/ogg:*" \x5c'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
 sed -i '$a\+	"http-get:*:video/x-pn-realvideo:*"'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
 sed -i '$a\'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch 
 sed -i '$a\ #define DLNA_FLAG_DLNA_V1_5      0x00100000'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
