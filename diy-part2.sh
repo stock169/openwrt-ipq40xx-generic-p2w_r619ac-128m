@@ -118,8 +118,8 @@ sed -i '$a\+		ends_with(file, ".pcm") || ends_with(file, ".ape")  ||'  feeds/pac
 sed -i '$a\ 		ends_with(file, ".dsf") || ends_with(file, ".dff"));'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
 sed -i '$a\ }'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
 cd feeds/packages/multimedia/
-rm -rf ffmpeg
-git clone https://gitee.com/stock169/ffmpeg
+#rm -rf ffmpeg
+#git clone https://gitee.com/stock169/ffmpeg
 cd ..
 cd sound
 rm -rf mpd
