@@ -122,8 +122,8 @@ cd feeds/packages/multimedia/
 #git clone https://gitee.com/stock169/ffmpeg
 cd ..
 cd sound
-rm -rf mpd
-git clone https://gitee.com/stock169/mpd
+#rm -rf mpd
+#git clone https://gitee.com/stock169/mpd
 cd ..
 cd ..
 cd ..
