@@ -12,7 +12,7 @@
 
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
-#sed -i 's/4.3.9_v1.2.14/4.3.8_v1.2.14/g' package/lean/qBittorrent-static/Makefile
+sed -i 's/4.3.9_v1.2.14/4.3.8_v1.2.14/g' package/lean/qBittorrent-static/Makefile
 rm -f feeds/packages/multimedia/minidlna/patches/005-added-support-RMVB.patch
 echo "" > feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
 sed -i '$a\diff -Naur a/metadata.c b/metadata.c'  feeds/packages/multimedia/minidlna/patches/002-support-ape-mka-rmvb-dsd-format.patch
