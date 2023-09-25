@@ -1,0 +1,55 @@
+diff -Naur a/metadata.c b/metadata.c
+--- a/metadata.c	2023-05-31 16:25:59.000000000 +0800
++++ b/metadata.c	2023-09-25 10:53:04.560054172 +0800
+@@ -338,6 +338,16 @@
+ 		strcpy(type, "flc");
+ 		m.mime = strdup("audio/x-flac");
+ 	}
++	else if( ends_with(path, ".ape") )
++	{
++		strcpy(type, "ape");
++		m.mime = strdup("audio/x-ape");
++	}
++	else if( ends_with(path, ".mka") )
++	{
++		strcpy(type, "mka");
++		m.mime = strdup("audio/x-matroska");
++	}	
+ 	else if( ends_with(path, ".wav") )
+ 	{
+ 		strcpy(type, "wav");
+diff -Naur a/upnpglobalvars.h b/upnpglobalvars.h
+--- a/upnpglobalvars.h	2023-05-31 16:25:59.000000000 +0800
++++ b/upnpglobalvars.h	2023-09-25 11:11:53.420057278 +0800
+@@ -172,7 +172,9 @@
+ 	"http-get:*:audio/x-wav:*," \
+ 	"http-get:*:audio/x-flac:*," \
+ 	"http-get:*:audio/x-dsd:*," \
++	"http-get:*:audio/x-matroska:*," \
+ 	"http-get:*:application/ogg:*" \
++    "http-get:*:audio/x-ape:*," \
+ 	"http-get:*:application/vnd.rn-realmedia:*" \
+ 	"http-get:*:application/vnd.rn-realmedia-vbr:*" \
+ 	"http-get:*:video/webm:*"
+diff -Naur a/utils.c b/utils.c
+--- a/utils.c	2023-05-31 16:25:59.000000000 +0800
++++ b/utils.c	2023-09-25 11:07:57.040056628 +0800
+@@ -339,6 +339,10 @@
+ 				return "flac";
+ 			else if( strcmp(mime+6, "flac") == 0 )
+ 				return "flac";
++			else if( strcmp(mime+6, "x-ape") == 0 )
++				return "ape";
++			else if( strcmp(mime+6, "x-matroska") == 0 )
++				return "mka";			
+ 			else if( strcmp(mime+6, "x-wav") == 0 )
+ 				return "wav";
+ 			else if( strncmp(mime+6, "L16", 3) == 0 )
+@@ -419,6 +423,7 @@
+ 		ends_with(file, ".mp4") || ends_with(file, ".m4p")  ||
+ 		ends_with(file, ".wav") || ends_with(file, ".ogg")  ||
+ 		ends_with(file, ".pcm") || ends_with(file, ".3gp")  ||
++		ends_with(file, ".pcm") || ends_with(file, ".ape")  ||		
+ 		ends_with(file, ".dsf") || ends_with(file, ".dff"));
+ }
+ 
