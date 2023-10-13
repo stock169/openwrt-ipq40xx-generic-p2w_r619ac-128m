@@ -17,5 +17,9 @@
 # echo 'src-git passwall_luci https://github.com/xiaorouji/openwrt-passwall2' >> feeds.conf.default
 # echo 'src-git helloworld https://github.com/fw876/helloworld' >> feeds.conf.default
 
+echo "src-git v2raya https://github.com/v2rayA/v2raya-openwrt.git" >> "feeds.conf.default"
+echo 'src-git mosdns https://github.com/sbwml/luci-app-mosdns.git' >> feeds.conf.default
+echo 'src-git v2raygeodata https://github.com/sbwml/v2ray-geodata.git' >> feeds.conf.default
+
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
