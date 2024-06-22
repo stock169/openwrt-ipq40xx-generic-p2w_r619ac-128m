@@ -52,3 +52,4 @@ rm -rf feeds/packages/net/tmp/.git
 rm -rf feeds/packages/net/tmp/.github
 rm -rf feeds/packages/net/tmp/gn
 mv feeds/packages/net/tmp/* feeds/packages/net
+rm -rf feeds/packages/net/shadowsocks-libev
