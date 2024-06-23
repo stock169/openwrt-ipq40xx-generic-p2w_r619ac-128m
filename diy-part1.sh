@@ -23,3 +23,4 @@
 
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
+sed -i 's/src-git telephony https:\/\/github.com\/openwrt\/telephony.git/#src-git telephony https:\/\/github.com\/openwrt\/telephony.git/g' feeds.conf.default
