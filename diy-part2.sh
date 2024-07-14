@@ -17,6 +17,10 @@
 #rm -f feeds/packages/multimedia/minidlna/patches/005-added-support-RMVB.patch
 #wget -P feeds/packages/multimedia/minidlna/patches/ https://raw.githubusercontent.com/stock169/openwrt-ipq40xx-generic-p2w_r619ac-128m/main/002-support-ape-mka-rmvb-dsd-format.patch
 wget -P feeds/packages/multimedia/minidlna/patches/ https://raw.githubusercontent.com/stock169/openwrt-ipq40xx-generic-p2w_r619ac-128m/main/002-support-ape-mka-format.patch
+rm -f feeds/packages/libs/libfmt/Makefile
+rm -f feeds/packages/libs/libfmt/patches/010-static.patch
+wget -P feeds/packages/libs/libfmt/ https://raw.githubusercontent.com/stock169/Makefile
+wget -P feeds/packages/libs/libfmt/patches/ https://raw.githubusercontent.com/stock169/010-static.patch
 rm -rf feeds/luci/applications/luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall.git feeds/luci/applications/luci-app-passwall
 rm -rf feeds/luci/applications/luci-app-passwall/.git
