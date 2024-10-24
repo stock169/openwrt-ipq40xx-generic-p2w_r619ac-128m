@@ -55,7 +55,7 @@ jobs:
  
     - name: Load custom configuration
       run: |
- #       [ -e files ] && mv files CoreELEC/files
+        [ -e files ] && mv files CoreELEC/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE CoreELEC/projects/Amlogic-ce/devices/Amlogic-no/linux/linux.aarch64.conf
  #       chmod +x $DIY_P2_SH
  #       cd CoreELEC
