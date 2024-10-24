@@ -60,7 +60,6 @@ jobs:
  #       chmod +x $DIY_P2_SH
  #       cd CoreELEC
  #       $GITHUB_WORKSPACE/$DIY_P2_SH
-
     - name: Compile the firmware
       id: compile
       run: |
