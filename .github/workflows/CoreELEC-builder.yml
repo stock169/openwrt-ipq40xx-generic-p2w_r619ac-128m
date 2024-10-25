@@ -93,9 +93,10 @@ jobs:
       run: df -hT
 
     - name: Upload bin directory
-      uses: actions/upload-artifact@main
+      uses: actions/upload-artifact@v4
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
-        path: CoreELEC/target
+        name: my-artifact
+        path: CoreELEC/target/
 
  
