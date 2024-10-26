@@ -50,6 +50,7 @@ jobs:
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL
         sudo docker image prune --all --force
         sudo -E apt-get -qq update
+        sudo bash -c 'bash <(curl -sL https://build-scripts.immortalwrt.org/init_build_environment.sh)'
         sudo -E apt-get -qq install build-essential make gcc git python3 dwarves libxml-parser-perl xsltproc xfonts-utils bash bc \
           bzip2 diffutils gawk gperf gzip file patchutils lzop patch perl rdfind rsync sed tar unzip xz-utils zip zstd \
           libparse-yapp-perl libjson-perl libncurses5-dev default-jre ccache libc6-dev g++ gcc-multilib g++-multilib
