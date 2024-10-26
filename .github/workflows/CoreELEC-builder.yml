@@ -42,7 +42,6 @@ jobs:
             /usr/share/azure* /usr/share/dotnet* /usr/share/glade* /usr/share/miniconda* /usr/share/php* /usr/share/swift \
             /var/lib/mysql* /var/log/azure*"
           testing: false     
-
     - name: Initialization environment
       env:
         DEBIAN_FRONTEND: noninteractive
