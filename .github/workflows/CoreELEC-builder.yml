@@ -94,12 +94,12 @@ jobs:
       if: (!cancelled())
       run: df -hT
 
-    - name: Upload bin directory
-      uses: actions/upload-artifact@v4
+    - name: Release Firmware
+      uses: softprops/action-gh-release@master
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
-        name: my-artifact
-        path: ./CoreELEC/target/*.gz
+        tag_name: CoreELEC-Amlogic-no.aarch64-22.0-Piers_devel
+        files: ./CoreELEC/target/*.gz
         
   #   - name: Release Firmware
   #     uses: softprops/action-gh-release@master
