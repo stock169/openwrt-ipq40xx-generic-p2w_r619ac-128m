@@ -50,7 +50,7 @@ jobs:
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL
         sudo docker image prune --all --force
         sudo -E apt-get -qq update
-        sudo -E apt-get -qq install make gcc git python3 dwarves libxml-parser-perl xsltproc xfonts-utils bash bc \
+        sudo -E apt-get -qq ack antlr3 asciidoc autoconf automake autopoint binutils bison build-essential \
          bzip2 diffutils gawk gperf gzip file patchutils lzop patch perl rdfind rsync sed tar unzip xz-utils zip zstd \
          libparse-yapp-perl libjson-perl libncurses5-dev default-jre ccache libc6-dev 
         sudo -E apt-get -qq autoremove --purge
