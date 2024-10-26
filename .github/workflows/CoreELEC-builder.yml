@@ -99,7 +99,7 @@ jobs:
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
         name: my-artifact
-        path: CoreELEC/target/
+        path: ./CoreELEC/target/*.gz
         
   #   - name: Release Firmware
   #     uses: softprops/action-gh-release@master
