@@ -58,7 +58,6 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
-        sudo echo "nameserver=8.8.8.8" >> /etc/resolv.conf
 
     - name: Clone source code
       working-directory: /workdir
