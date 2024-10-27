@@ -77,10 +77,9 @@ jobs:
 
     - name: Load custom diy
       run: |
- #      [ -e $FEEDS_CONF ] && mv $FEEDS_CONF CoreELEC/projects/Amlogic-ce/devices/Amlogic-no/linux/linux.aarch64.conf
- #      chmod +x $DIY_P1_SH
- #      cd CoreELEC
- #      $GITHUB_WORKSPACE/$DIY_P1_SH
+       chmod +x $DIY_P1_SH
+       cd CoreELEC
+       $GITHUB_WORKSPACE/$DIY_P1_SH
 
  
     - name: Load custom configuration
