@@ -9,7 +9,7 @@ env:
   REPO_URL: https://github.com/CoreELEC/CoreELEC
   REPO_BRANCH: coreelec-22
   CONFIG_FILE: linux.aarch64.conf
-  DIY_P1_SH: diy-part1.sh
+  DIY_P1_SH: c-diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
