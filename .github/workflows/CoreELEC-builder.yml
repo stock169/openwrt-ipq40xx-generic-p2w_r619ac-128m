@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  REPO_URL: https://github.com/stock169/CoreELEC
+  REPO_URL: https://github.com/CoreELEC/CoreELEC
   REPO_BRANCH: coreelec-22
   CONFIG_FILE: linux.aarch64.conf
   DIY_P1_SH: diy-part1.sh
@@ -71,6 +71,9 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH CoreELEC
         ln -sf /workdir/CoreELEC $GITHUB_WORKSPACE/CoreELEC
+        cd CoreELEC
+        git checkout b3070da9b73a74d65136ada1b9994f272092432f
+        cd ..
 
     - name: Load custom feeds
       run: |
