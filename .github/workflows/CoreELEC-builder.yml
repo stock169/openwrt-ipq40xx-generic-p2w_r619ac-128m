@@ -72,7 +72,7 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH CoreELEC
         ln -sf /workdir/CoreELEC $GITHUB_WORKSPACE/CoreELEC
         cd CoreELEC
-        git checkout b3070da9b73a74d65136ada1b9994f272092432f
+        git checkout be6a8a84d1ba5baf974f5c4327c3b3731badf967
         cd ..
 
     - name: Load custom diy
