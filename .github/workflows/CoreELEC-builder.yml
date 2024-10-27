@@ -75,7 +75,7 @@ jobs:
         git checkout b3070da9b73a74d65136ada1b9994f272092432f
         cd ..
 
-    - name: Load custom feeds
+    - name: Load custom diy
       run: |
  #      [ -e $FEEDS_CONF ] && mv $FEEDS_CONF CoreELEC/projects/Amlogic-ce/devices/Amlogic-no/linux/linux.aarch64.conf
  #      chmod +x $DIY_P1_SH
