@@ -10,7 +10,6 @@ boot_prefixes=/ /boot/
 boot_script_dhcp=boot.scr.uimg
 boot_scripts=boot.scr.uimg boot.scr
 boot_targets=mmc1 mmc0 mtd2 mtd1 mtd0 usb0 pxe dhcp 
-bootcmd=boot_fit;
 bootcmd_dhcp=run boot_net_usb_start; if dhcp ${scriptaddr} ${boot_script_dhcp}; then source ${scriptaddr}; fi;
 bootcmd_mmc0=setenv devnum 0; run mmc_boot
 bootcmd_mmc1=setenv devnum 1; run mmc_boot
@@ -43,9 +42,48 @@ stdout=serial,vidconsole
 usb_boot=usb start; if usb dev ${devnum}; then setenv devtype usb; run scan_dev_for_boot_part; fi
 vendor=rockchip
 format_flag=on
-xl_rootfs_version=V2.0.5
-xl_system_ver=V2.0.5
-xl_softmode=usermode
+xl_rootfs_version=V2.0.1
+xl_system_ver=V2.0.1
 second_image_load=off
-xl_kernel_ver=V2.0.5
+xl_kernel_ver=V2.0.1
 xl_rootfs_upgrade=false
+bootcmd=run bootcmd_usb1;boot_fit
+bootcmd_usb1=if test ${serial#} = ;then usb start;run bootcmd_usb_boot;fi
+bootcmd_usb_boot=if test -e usb 0 boot/dtb/rockchip/rk3566-oec-box-wxy4.dtb;then run extlinux_env;run bootcmd_usb0;elif test -e mmc 0:7 extlinux/extlinux.conf; then run extlinux_env;run bootcmd_emmc;else; boot_fit;fi
+extlinux_env=setenv fdt_addr_r 0x12000000;setenv kernel_addr_r 0x02000000;setenv ramdisk_addr_r 0x12180000
+bootcmd_emmc=sysboot mmc 0:7 any 0x00c00000 /extlinux/extlinux.conf
+xl_softmode=factory
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
